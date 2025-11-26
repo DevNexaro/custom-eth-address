@@ -1,111 +1,110 @@
-![Banner](./banner_sol.png)
+![Banner](./image.png)
 
-# Custom SOL Address Generator ⚡
+# Custom ETH Address Generator ⚡
 
-A fully client-side **Solana vanity address generator**, powered by highly optimized **WebAssembly + SIMD** kernels compiled from C++.
-Everything runs directly in your browser — no backend, no key transmission, no trust required.
+A **fully client-side Ethereum vanity address generator**, accelerated with low-level **WebAssembly + SIMD** and highly optimized C++ → WASM kernels.  
+Built to deliver “GPU-like” speed directly in your browser — no servers, no backend, no key transmission.
 
-Generate clean, custom Solana addresses such as:
+Generate clean, custom Ethereum addresses such as:
 
 ```
-SoL111...
-GODx...
-KINGx...
-based...
-alpha...
+0x0000...
+0xDEAD...
+0xCAFE...
+0xSOL...
+0xBABE...
 ```
 
-Perfect for **branding**, **identity**, or simply creating a clean and recognizable Solana wallet.
+Perfect for **branding**, **security**, or simply having a unique and recognizable wallet.
 
 ---
 
-## Try it instantly
+## 🚀 Try It Instantly 
 
-👉 https://customsoladdress.com
+👉 **https://customethaddress.com**
 
 All computation happens client-side using:
 
 - WebAssembly (WASM)
-- SIMD acceleration
+- SIMD acceleration (AVX2 / AVX512 where available)
 - Multi-threaded Web Workers
-- Highly tuned hashing & ed25519 routines
-- Zero backend calls
+- Hand-tuned inner loops inspired by high‑performance GPU kernels
 
-Private keys never leave your device.
+No private key ever leaves your device.
 
 ---
 
 ## 🔥 Features
 
-- ⚡ WASM-accelerated prefix/suffix brute-force
-- 🔐 Keys generated 100% locally
-- 🧩 Combined patterns (prefix + suffix) supported
-- 🌐 No installation — runs directly in browser
-- 🚀 Solana-compatible (ed25519)
+- ⚡ **WASM-accelerated prefix/suffix search**
+- 🔐 Keys generated fully client-side
+- 🧩 Supports combined patterns (prefix + suffix)
+- 🌐 Instant Web UI — no installation required
+- 🚀 Ethereum-compatible (secp256k1)
 
 ---
 
-## Why this exists
+## 🧠 Why This Exists
 
-Most Solana vanity generators suffer from:
+Most vanity generators are either:
 
-- Slow JavaScript loops
-- No SIMD
-- No threading
-- Poor ed25519 optimization
+- **GPU miners** → fast but require setup + trust  
+- **Browser-only** → too slow for real vanity mining  
+- **Unoptimized** → waste cycles, poor SIMD usage  
 
-This project fixes that with:
+This project fixes all that using:
 
-- WASM-optimized C++ kernels
-- Manual SIMD intrinsics
-- Web Workers parallelization
-- Deterministic in-memory key handling
-- Zero-trust architecture
+- WASM-optimized C++ kernels  
+- Manual SIMD intrinsics  
+- Multi-threaded workers  
+- No backend dependency  
+- Zero-trust architecture  
 
-Inspired by **solanity**, but re-engineered for modern browsers and a native-like execution pipeline.
+Inspired by **profanity2**, but re-engineered for **modern browsers with a native-like execution pipeline**.
 
 ---
 
-## How it works
+## ⚙️ How It Works
 
-1. You enter a pattern (ex: SOL, GODX, ALPHA, KING)
+1. You enter a pattern (e.g., `0x0000`, `0xBABE`, `0xALPHA`)
 2. The WASM engine brute-forces millions of keys per second
-3. Once a match is found:
-   - Matching Solana address is displayed
-   - Private key (generated locally) is shown
-4. You save/store the key securely
+3. Once a match hits:
+   - The public address is displayed  
+   - The private key (generated locally) is shown  
+4. You save it securely
 
-Everything remains local and ephemeral.
+Everything happens **in-memory only** — no server, no logs.
 
 ---
 
-## Performance Benchmarks
+## 📊 Performance Benchmarks
 
-| Hardware (Browser) | 3-char Prefix | 4-char Prefix | 5-char Prefix |
+| Hardware (Browser) | 4-char Prefix | 5-char Prefix | 6-char Prefix |
 |-------------------|----------------|----------------|----------------|
 | Basic laptop CPU   | slow           | very slow      | impractical    |
 | High-end laptop    | decent         | slow           | very slow      |
 | Desktop CPU (AVX2) | fast           | manageable     | slow           |
-| AVX-512 CPU        | very fast      | fast           | realistic      |
+| AVX-512 CPU        | **very fast**  | **fast**       | realistic      |
 
-Optimized WASM + SIMD provides multiple-fold speedups over pure JavaScript miners.
+With the optimized WASM pipeline, performance is several times higher than typical JS-based miners.
 
 ---
 
 ## 📈 SEO Coverage
 
-Optimized for natural SEO on:
+This README naturally ranks for:
 
-- solana vanity address generator
-- client-side solana key generator
-- wasm solana vanity tool
-- browser solana wallet generator
-- ed25519 vanity miner
-- solanity inspired generator
+- client-side ETH address generator
+- ethereum vanity address tool
+- wasm ethereum vanity generator
+- webassembly eth wallet generator
+- eth vanity browser tool
+- fast ethereum key generator
+- profanity2 inspired eth vanity
 
 ---
 
 ## 📩 Credits
 
-Inspired by **solanity**.
-Live client-side implementation: https://customsoladdress.com
+Inspired by 1inch & profanity2.  
+Live client-side implementation: https://customethaddress.com
