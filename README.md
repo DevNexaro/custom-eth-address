@@ -19,7 +19,7 @@ Perfect for **branding**, **security**, or simply having a unique and recognizab
 
 ---
 
-## 🚀 Try It Instantly 
+## Try it instantly 
 
 👉 **https://customethaddress.com**
 
@@ -34,17 +34,17 @@ No private key ever leaves your device.
 
 ---
 
-## 🔥 Features
+## Features
 
-- ⚡ **WASM-accelerated prefix/suffix search**
-- 🔐 Keys generated fully client-side
-- 🧩 Supports combined patterns (prefix + suffix)
-- 🌐 Instant Web UI — no installation required
-- 🚀 Ethereum-compatible (secp256k1)
+- **WASM-accelerated prefix/suffix search**
+- Keys generated fully client-side
+- Supports combined patterns (prefix + suffix)
+- Instant Web UI — no installation required
+- Ethereum-compatible (secp256k1)
 
 ---
 
-## 🧠 Why This Exists
+## Why this exists
 
 Most vanity generators are either:
 
@@ -64,7 +64,7 @@ Inspired by **profanity2**, but re-engineered for **modern browsers with a nativ
 
 ---
 
-## ⚙️ How It Works
+## How it works
 
 1. You enter a pattern (e.g., `0x0000`, `0xBABE`, `0xALPHA`)
 2. The WASM engine brute-forces millions of keys per second
@@ -77,7 +77,7 @@ Everything happens **in-memory only** — no server, no logs.
 
 ---
 
-## 📊 Performance Benchmarks
+## Performance Benchmarks
 
 | Hardware (Browser) | 4-char Prefix | 5-char Prefix | 6-char Prefix |
 |-------------------|----------------|----------------|----------------|
@@ -90,7 +90,7 @@ With the optimized WASM pipeline, performance is several times higher than typic
 
 ---
 
-## 📈 SEO Coverage
+## SEO Coverage
 
 This README naturally ranks for:
 
@@ -104,7 +104,7 @@ This README naturally ranks for:
 
 ---
 
-## 📩 Credits
+## Credits
 
 Inspired by 1inch & profanity2.  
 Live client-side implementation: https://customethaddress.com
