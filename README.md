@@ -1,11 +1,12 @@
-
 ![Banner](./image.png)
+
 # Custom ETH Address Generator ⚡
 
-Generate **custom Ethereum addresses** at extreme speeds using modern NVIDIA RTX GPUs.  
-This project is **inspired by 1inch/profanity2**, but rebuilt and heavily accelerated for **next-gen RTX architectures** — including **RTX 4090 / 5090**.
+A **fully client-side Ethereum vanity address generator**, accelerated with low-level **WebAssembly + SIMD** and highly optimized C++ → WASM kernels.  
+Built to deliver “GPU-like” speed directly in your browser — no servers, no backend, no key transmission.
 
-Use this tool to mine **vanity Ethereum addresses** such as:
+Generate clean, custom Ethereum addresses such as:
+
 ```
 0x0000...
 0xDEAD...
@@ -14,26 +15,31 @@ Use this tool to mine **vanity Ethereum addresses** such as:
 0xBABE...
 ```
 
-Perfect for **branding**, **security**, or simply having a unique, recognizable wallet.
+Perfect for **branding**, **security**, or simply having a unique and recognizable wallet.
 
 ---
 
-## 🚀 Try It Instantly With Our Own RTX 5090
-
-You can test the generator live:
+## 🚀 Try It Instantly 
 
 👉 **https://customethaddress.com**
 
-The backend runs on a dedicated **RTX 5090**, giving you *real-world GPU benchmarks* and instant results for short prefixes.
+All computation happens client-side using:
+
+- WebAssembly (WASM)
+- SIMD acceleration (AVX2 / AVX512 where available)
+- Multi-threaded Web Workers
+- Hand-tuned inner loops inspired by high‑performance GPU kernels
+
+No private key ever leaves your device.
 
 ---
 
 ## 🔥 Features
 
-- ⚡ **GPU-accelerated prefix search** (optimized for RTX 4090 & 5090)
-- 🔐 Full client-side private key generation for maximum security
-- 🧩 Supports prefix + suffix patterns
-- 🌐 Web UI for instant vanity address creation
+- ⚡ **WASM-accelerated prefix/suffix search**
+- 🔐 Keys generated fully client-side
+- 🧩 Supports combined patterns (prefix + suffix)
+- 🌐 Instant Web UI — no installation required
 - 🚀 Ethereum-compatible (secp256k1)
 
 ---
@@ -42,44 +48,45 @@ The backend runs on a dedicated **RTX 5090**, giving you *real-world GPU benchma
 
 Most vanity generators are either:
 
-- **CPU-only** → slow  
-- **Browser-limited** → depends on user hardware  
-- **Unoptimized** → not adapted for modern GPUs  
+- **GPU miners** → fast but require setup + trust  
+- **Browser-only** → too slow for real vanity mining  
+- **Unoptimized** → waste cycles, poor SIMD usage  
 
-This project solves that with:
+This project fixes all that using:
 
-- Custom GPU kernels  
-- Heavy RTX optimization  
-- Secure ephemeral key handling  
-- A simple, fast web interface  
+- WASM-optimized C++ kernels  
+- Manual SIMD intrinsics  
+- Multi-threaded workers  
+- No backend dependency  
+- Zero-trust architecture  
 
-Inspired by **profanity2**, but rewritten for **high-end GPU acceleration**.
+Inspired by **profanity2**, but re-engineered for **modern browsers with a native-like execution pipeline**.
 
 ---
 
 ## ⚙️ How It Works
 
-1. Enter a prefix (e.g., `0x0000`, `0xBABE`, `0xALPHA`)
-2. GPU brute-forces billions of keys per second
-3. When a match is found, you instantly receive:
-   - Public address  
-   - Private key (generated locally)
-4. You save it securely (never uploaded)
+1. You enter a pattern (e.g., `0x0000`, `0xBABE`, `0xALPHA`)
+2. The WASM engine brute-forces millions of keys per second
+3. Once a match hits:
+   - The public address is displayed  
+   - The private key (generated locally) is shown  
+4. You save it securely
 
-**Everything is generated runtime only — nothing is stored.**
+Everything happens **in-memory only** — no server, no logs.
 
 ---
 
 ## 📊 Performance Benchmarks
 
-| Hardware     | 4-char Prefix | 5-char Prefix | 6-char Prefix |
-|--------------|----------------|----------------|----------------|
-| CPU (Browser) | very slow      | impractical     | impossible     |
-| RTX 3090     | fast           | decent          | slow           |
-| RTX 4090     | extremely fast | fast            | manageable     |
-| **RTX 5090** | **ultra-fast** | **very fast**   | **realistic**  |
+| Hardware (Browser) | 4-char Prefix | 5-char Prefix | 6-char Prefix |
+|-------------------|----------------|----------------|----------------|
+| Basic laptop CPU   | slow           | very slow      | impractical    |
+| High-end laptop    | decent         | slow           | very slow      |
+| Desktop CPU (AVX2) | fast           | manageable     | slow           |
+| AVX-512 CPU        | **very fast**  | **fast**       | realistic      |
 
-GPU mode is **hundreds of times faster** than browser CPU mode.
+With the optimized WASM pipeline, performance is several times higher than typical JS-based miners.
 
 ---
 
@@ -87,23 +94,17 @@ GPU mode is **hundreds of times faster** than browser CPU mode.
 
 This README naturally ranks for:
 
-- custom ETH address generator
-
-- ethereum vanity address
-
-- GPU ETH vanity tool
-
-- RTX 4090 / 5090 vanity generator
-
-- profanity2 GPU fork
-
-- ethereum wallet generator online
-
+- client-side ETH address generator
+- ethereum vanity address tool
+- wasm ethereum vanity generator
+- webassembly eth wallet generator
+- eth vanity browser tool
 - fast ethereum key generator
+- profanity2 inspired eth vanity
 
+---
 
 ## 📩 Credits
 
-Inspired by the work of 1inch & profanity2.
-
-Live GPU implementation: https://customethaddress.com
+Inspired by 1inch & profanity2.  
+Live client-side implementation: https://customethaddress.com
